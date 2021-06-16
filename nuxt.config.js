@@ -17,7 +17,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ["~/plugins/mixinSrcSvg.js"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -30,7 +30,12 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ["@nuxtjs/axios"],
+
+  // Axios Configuration: See https://axios.nuxtjs.org/options
+  axios: {
+    baseURL: "url-back-end"
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {}
